@@ -4,32 +4,122 @@
     "cname": "Ishraak Solutions",
     "salary": "10000",
     "location": "Niketan"
+    "imageUrl": "https://www.moumaachi.com/upload/company/ishraak-solutions.jpg",
+    "time": "10:05 PM",
+    "date": "01/10/20"
+    "position": "Flutter Developer"
   },
-  
-   {
-    "id": 1,
-    "cname": "Ishraak Solutions",
-    "salary": "10000",
-    "location": "Niketan"
-  },
-   {
-    "id": 1,
-    "cname": "Ishraak Solutions",
-    "salary": "10000",
-    "location": "Niketan"
-  },
-   {
-    "id": 1,
-    "cname": "Ishraak Solutions",
-    "salary": "10000",
-    "location": "Niketan"
+   {    
+    "id": 2,
+    "cname": "Tiger IT",
+    "salary": "15000",
+    "location": "Banani"
+    "imageUrl": "https://tbsnews.net/sites/default/files/styles/big_2/public/images/2019/08/28/tigerit.jpg?itok=EgWQhUTi&timestamp=1567001901",
+    "time": "11:00 PM",
+    "date": ""01/10/20""
+    "position": "Web App"
   },
    {
-    "id": 1,
+    "id": 3,
+    "cname": "DataSoft",
+    "salary": "10000",
+    "location": "Shyamoli"
+    "imageUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.jagojobs.com%2Fcompany-jobs%2F2121&psig=AOvVaw0-dqx3Tc-L9UtH-cPm4OM9&ust=1607505197374000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDmnNaFvu0CFQAAAAAdAAAAABAJ",
+    "time": "08:30 PM",
+    "date": "01/11/20"
+    "position": "IOS Developer"
+  },
+   {
+    "id": 4,
     "cname": "Ishraak Solutions",
     "salary": "10000",
-    "location": "Niketan"
+    "location": "Karowan Bazar"
+    "imageUrl": "https://www.leads.com.bd/wp-content/uploads/2019/05/LEADS-with-white-Background-01-1.png",
+    "time": "08:00 AM",
+    "date": "10/11/20"
+    "position": "Android Developer"
+  },
+   {
+    "id": 5,
+    "cname": "Therap",
+    "salary": "10000",
+    "location": "Shyamoli"
+    "imageUrl": "https://www.therapglobal.net/wp-content/uploads/2018/05/logo-therap-global-v2-01-01-1.png",
+    "time": "10:10 AM",
+    "date": "11/11/20"
+    "position": "IOS Developer"
   }
+  {
+    "id": 6,
+    "cname": "Ishraak Solutions",
+    "salary": "10000",
+    "location": "Niketan"
+    "imageUrl": "https://www.moumaachi.com/upload/company/ishraak-solutions.jpg",
+    "time": "01:10",
+    "date": "01/11/20"
+    "position": "Flutter Developer"
+  },
+  {
+    "id": 1,
+    "cname": "Ishraak Solutions",
+    "salary": "10000",
+    "location": "Niketan"
+    "imageUrl": "https://www.moumaachi.com/upload/company/ishraak-solutions.jpg",
+    "time": "10:05 PM",
+    "date": "01/10/20"
+    "position": "Flutter Developer"
+  },
+   {    
+    "id": 2,
+    "cname": "Tiger IT",
+    "salary": "15000",
+    "location": "Banani"
+    "imageUrl": "https://tbsnews.net/sites/default/files/styles/big_2/public/images/2019/08/28/tigerit.jpg?itok=EgWQhUTi&timestamp=1567001901",
+    "time": "11:00 PM",
+    "date": ""01/10/20""
+    "position": "Web App"
+  },
+   {
+    "id": 3,
+    "cname": "DataSoft",
+    "salary": "10000",
+    "location": "Shyamoli"
+    "imageUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.jagojobs.com%2Fcompany-jobs%2F2121&psig=AOvVaw0-dqx3Tc-L9UtH-cPm4OM9&ust=1607505197374000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDmnNaFvu0CFQAAAAAdAAAAABAJ",
+    "time": "08:30 PM",
+    "date": "01/11/20"
+    "position": "IOS Developer"
+  },
+   {
+    "id": 4,
+    "cname": "Ishraak Solutions",
+    "salary": "10000",
+    "location": "Karowan Bazar"
+    "imageUrl": "https://www.leads.com.bd/wp-content/uploads/2019/05/LEADS-with-white-Background-01-1.png",
+    "time": "08:00 AM",
+    "date": "10/11/20"
+    "position": "Android Developer"
+  },
+   {
+    "id": 5,
+    "cname": "Therap",
+    "salary": "10000",
+    "location": "Shyamoli"
+    "imageUrl": "https://www.therapglobal.net/wp-content/uploads/2018/05/logo-therap-global-v2-01-01-1.png",
+    "time": "10:10 AM",
+    "date": "11/11/20"
+    "position": "IOS Developer"
+  }
+  {
+    "id": 6,
+    "cname": "Ishraak Solutions",
+    "salary": "10000",
+    "location": "Niketan"
+    "imageUrl": "https://www.moumaachi.com/upload/company/ishraak-solutions.jpg",
+    "time": "01:10",
+    "date": "01/11/20"
+    "position": "Flutter Developer"
+  },
+ 
   
   
   
