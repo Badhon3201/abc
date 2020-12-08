@@ -1,27 +1,36 @@
 [
   {
-    "publisher":"Publisher 1",
-    "total":120.0
-
+    "id": 1,
+    "cname": "Ishraak Solutions",
+    "salary": "10000",
+    "location": "Niketan"
   },
-  {
-    "publisher":"Publisher 2",
-    "total":45.0
-
+  
+   {
+    "id": 1,
+    "cname": "Ishraak Solutions",
+    "salary": "10000",
+    "location": "Niketan"
   },
-  {
-    "publisher":"Publisher 3",
-    "total":70.0
-
+   {
+    "id": 1,
+    "cname": "Ishraak Solutions",
+    "salary": "10000",
+    "location": "Niketan"
   },
-  {
-    "publisher":"Publisher 4",
-    "total":120.0
-
+   {
+    "id": 1,
+    "cname": "Ishraak Solutions",
+    "salary": "10000",
+    "location": "Niketan"
   },
-  {
-    "publisher":"Publisher 5",
-    "total":95.0
-
+   {
+    "id": 1,
+    "cname": "Ishraak Solutions",
+    "salary": "10000",
+    "location": "Niketan"
   }
+  
+  
+  
 ]
