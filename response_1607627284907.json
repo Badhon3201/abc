@@ -1,8 +1,8 @@
 {
-  "username": [
-    "This field is required."
+  "email": [
+    "badhon9265@gmail.com"
   ],
   "password": [
-    "This field is required."
+    "12345"
   ]
 }
