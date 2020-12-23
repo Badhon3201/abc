@@ -1,22 +1,22 @@
 [
    {
-      "publisher":"Publisher 1",
+      "publisher":"12am",
       "total":120.0
    },
    {
-      "publisher":"Publisher 2",
+      "publisher":"3am",
       "total":45.0
    },
    {
-      "publisher":"Publisher 3",
+      "publisher":"9am",
       "total":70.0
    },
    {
-      "publisher":"Publisher 4",
+      "publisher":"12pm",
       "total":120.0
    },
    {
-      "publisher":"Publisher 5",
+      "publisher":"1pm",
       "total":95.0
    }
 ]
