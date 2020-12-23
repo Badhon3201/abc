@@ -1,0 +1,22 @@
+[
+   {
+      "publisher":"Publisher 1",
+      "total":120.0
+   },
+   {
+      "publisher":"Publisher 2",
+      "total":45.0
+   },
+   {
+      "publisher":"Publisher 3",
+      "total":70.0
+   },
+   {
+      "publisher":"Publisher 4",
+      "total":120.0
+   },
+   {
+      "publisher":"Publisher 5",
+      "total":95.0
+   }
+]
