@@ -1,7 +1,5 @@
-{
-   "publishers":[
-      {
-         "name":"Publisher Name",
-      }
-   ]
-}
+[
+  {
+    "publisher":"100000",
+  }
+]
