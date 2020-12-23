@@ -1,22 +1,42 @@
 [
+  {
+    "publisher":"1 pm",
+    "total":90
+  },
+  {
+    "publisher":"2",
+    "total":50
+  },
+  {
+    "publisher":"3",
+    "total":64
+  },
+  {
+    "publisher":"4",
+    "total":47
+  },
+  {
+    "publisher":"5",
+    "total":76
+  },
+    {
+    "publisher":"6",
+    "total":35
+  },
+  {
+    "publisher":"7",
+    "total":106
+  },
    {
-      "publisher":"12am",
-      "total":120.0
-   },
+    "publisher":"8",
+    "total":60
+  },
    {
-      "publisher":"3am",
-      "total":45.0
-   },
+    "publisher":"9",
+    "total":40
+  },
    {
-      "publisher":"9am",
-      "total":70.0
-   },
-   {
-      "publisher":"12pm",
-      "total":120.0
-   },
-   {
-      "publisher":"1pm",
-      "total":95.0
-   }
+    "publisher":"10",
+    "total":60
+  }
 ]
