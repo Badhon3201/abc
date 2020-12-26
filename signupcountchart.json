@@ -1,0 +1,26 @@
+[
+   {
+      "month":"Jan",
+      "total":50
+   },
+   {
+      "month":"Fab",
+      "total":90
+   },
+   {
+      "month":"Mar",
+      "total":200
+   },
+   {
+      "month":"Apr",
+      "total":300
+   },
+   {
+      "month":"May",
+      "total":250
+   },
+   {
+      "month":"June",
+      "total":290
+   }
+]
