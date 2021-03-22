@@ -1,5 +1,22 @@
-[
-   {
-      "picktime":"12:50"
-   }
-]
+{
+   "status":"ok",
+   "totalResults":8654,
+   "job_created_per_day":[
+      {
+         "day":"2020-04-18",
+         "total":14
+      },
+      {
+         "day":"2020-04-19",
+         "total":42
+      },
+      {
+         "day":"2020-04-20",
+         "total":63
+      },
+      {
+         "day":"2020-04-21",
+         "total":70
+      }
+   ]
+}
