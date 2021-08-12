@@ -1,0 +1,388 @@
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:job_xprss/core/app_navigator.dart';
+import 'package:job_xprss/core/app_theme/common_style.dart';
+import 'package:job_xprss/core/resource/const.dart';
+import 'package:job_xprss/core/resource/strings_resource.dart';
+import 'package:job_xprss/core/views/widgets/custom_image_widget.dart';
+import 'package:job_xprss/professional/features/job_news/view/blog_news_details_screen.dart';
+import 'package:job_xprss/professional/features/job_news/view/job_news_list_screen.dart';
+import 'package:job_xprss/professional/features/job_news/view_models/job_news_view_model.dart';
+import 'package:provider/provider.dart';
+import 'package:shimmer/shimmer.dart';
+
+class JobNewsListHWidget extends StatefulWidget {
+  @override
+  _JobNewsListHWidgetState createState() => _JobNewsListHWidgetState();
+}
+
+class _JobNewsListHWidgetState extends State<JobNewsListHWidget> {
+  @override
+  void initState() {
+    var vm = Provider.of<JobNewsViewModel>(context, listen: false);
+    if (vm.jobNewsList.length == 0) {
+      Future.delayed(Duration.zero).then((value) {
+        vm.getData();
+      });
+    }
+    super.initState();
+  }
+
+  List<a> news = [
+    a(name: "Badhon", name2: "Monir"),
+    a(name: "Badhon", name2: "Monir"),
+    a(name: "Badhon", name2: "Monir"),
+    a(name: "Badhon", name2: "Monir"),
+    a(name: "Badhon", name2: "Monir"),
+    a(name: "Badhon", name2: "Monir")
+  ];
+  final CarouselController _controller = CarouselController();
+  int index = 0;
+  var _current = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    // final List<Widget> imageSliders = news
+    //     .map((item) => Container(
+    //           width: 1000,
+    //           color: Colors.grey,
+    //           child: Container(
+    //             margin: EdgeInsets.all(5.0),
+    //             child: ClipRRect(
+    //                 borderRadius: BorderRadius.all(Radius.circular(5.0)),
+    //                 child: Container(
+    //                   height: 250,
+    //                   child: Text(item.name),
+    //                   // child: Image.network(
+    //                   //     'https://api.emporiumbyayaat.com/${item.image}',
+    //                   //     fit: BoxFit.fill,
+    //                   //     width: 1000.0),
+    //                 )),
+    //           ),
+    //         ))
+    //     .toList();
+    var vm = Provider.of<JobNewsViewModel>(context);
+    var list = vm.jobNewsList.take(5);
+    var length;
+    final List<Widget> imageSliders = list
+        .map((item) => Container(
+            width: 1000,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 4, left: 5, right: 5),
+              child: Card(
+                // key: Key(newsModel.id.toString()),
+                elevation: 2,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(4),
+                  child: InkWell(
+                    key: Key('careerAdviceTile${(index + 1)}'),
+                    onTap: () {
+                      AppNavigator.push(
+                          JobNewsDetailsScreen(
+                            slug: item.slug,
+                          ),
+                          name: 'JobNewsDetailsScreen');
+                    },
+                    child: MediaQuery.of(context).size.width >= 600
+                        ? Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Container(
+                              width: 180,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  Hero(
+                                    tag: "${item.id}",
+                                    child: CustomImageWidget(
+                                      height: 100,
+                                      width: 180,
+                                      imageUrl: item.featuredImage,
+                                      placeholderImageAssetPath:
+                                          kCareerAdvicePlaceholder,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8, vertical: 4),
+                                    child: Text(
+                                      item.title ?? "",
+                                      style: TextStyle(
+                                        // color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8),
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.person,
+                                          size: 12,
+                                          color: Colors.grey,
+                                        ),
+                                        SizedBox(
+                                          width: 3,
+                                        ),
+                                        Text(
+                                          item.author ?? "",
+                                          maxLines: 1,
+                                          style: TextStyle(
+                                              color: Colors.grey,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8, vertical: 5),
+                                    child: Text(
+                                      item.shortDescription ?? "",
+                                      style: TextStyle(
+                                          // color: Colors.white,
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 12),
+                                      maxLines: 3,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        : Container(
+                            width: MediaQuery.of(context).size.width,
+                            child: Row(
+                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Hero(
+                                  tag: "${item.featuredImage}",
+                                  child: CustomImageWidget(
+                                    height: 250,
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.5,
+                                    imageUrl: item.featuredImage,
+                                    fit: BoxFit.fill,
+                                    placeholderImageAssetPath:
+                                        kCareerAdvicePlaceholder,
+                                  ),
+                                ),
+                                Container(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.45,
+                                  height: 120,
+                                  child: Column(
+                                    // crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      // CachedNetworkImage(
+                                      //   height: 100,
+                                      //   width: 180,
+                                      //   fit: BoxFit.cover,
+                                      //   imageUrl: adviceModel.featuredImage ?? "",
+                                      //   placeholder: (c, i) => Image.asset(
+                                      //     kCareerAdvicePlaceholder,
+                                      //     colorBlendMode: BlendMode.color,
+                                      //     height: 100,
+                                      //     width: 180,
+                                      //     fit: BoxFit.fitWidth,
+                                      //   ),
+                                      // ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 8, vertical: 4),
+                                        child: Text(
+                                          item.title ?? "",
+                                          style: TextStyle(
+                                            // color: Colors.white,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 6),
+                                        child: Row(
+                                          children: [
+                                            Icon(
+                                              Icons.person,
+                                              size: 12,
+                                              color: Colors.grey,
+                                            ),
+                                            SizedBox(
+                                              width: 3,
+                                            ),
+                                            Text(
+                                              item.author ?? "",
+                                              style: TextStyle(
+                                                  color: Colors.grey,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 12),
+                                              maxLines: 1,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 8, vertical: 5),
+                                        child: Text(
+                                          item.shortDescription ?? "",
+                                          style: TextStyle(
+                                              // color: Colors.white,
+                                              fontWeight: FontWeight.normal,
+                                              fontSize: 12),
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                  ),
+                ),
+              ),
+            )))
+        .toList();
+
+    MediaQuery.of(context).size.width > 600
+        ? length = list.length < 5 ? list.length : 6
+        : length = list.length < 5 ? list.length : 5;
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Text(
+                StringResources.jobNewsText,
+                style: CommonStyle.dashboardSectionTitleTexStyle,
+              ),
+            ),
+            RawMaterialButton(
+              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              onPressed: () {
+                AppNavigator.push(JobNewsListScreen(),
+                    name: 'JobNewsListScreen');
+                // Navigator.of(context).push(CupertinoPageRoute(
+                //     builder: (BuildContext context) => CareerAdviceListScreen()));
+              },
+              child: Text(
+                StringResources.viewAllText,
+                key: Key('careerAdviceViewAll'),
+                style: Theme.of(context)
+                    .textTheme
+                    .subtitle1
+                    .apply(color: Colors.blue),
+              ),
+            ),
+          ],
+        ),
+        vm.shouldShowPageLoader
+            ? Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: SizedBox(
+                  height: 160.0,
+                  child: Shimmer.fromColors(
+                    baseColor: Colors.grey[300],
+                    highlightColor: Colors.white,
+                    child: Row(
+                        children: List.generate(
+                            1,
+                            (index) => Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Material(
+                                      color: Colors.grey,
+                                      borderRadius: BorderRadius.circular(5),
+                                      child: Center(),
+                                    ),
+                                  ),
+                                ))),
+                  ),
+                ),
+              )
+            : Container(
+                height: 160,
+                child: Container(
+                  height: MediaQuery.of(context).size.height * 0.6,
+                  child: Column(children: [
+                    Expanded(
+                      child: CarouselSlider(
+                        items: imageSliders,
+                        carouselController: _controller,
+                        options: CarouselOptions(
+                            height: MediaQuery.of(context).size.height * 0.6,
+                            autoPlay: true,
+                            // enableInfiniteScroll: false,
+                            // autoPlayAnimationDuration: Duration(seconds: 5),
+                            autoPlayInterval: Duration(seconds: 5),
+                            // viewportFraction: 1,
+                            // enlargeCenterPage: true,
+                            aspectRatio: 2.0,
+                            onPageChanged: (index, reason) {
+                              setState(() {
+                                _current = index;
+                              });
+                            }),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: imageSliders.asMap().entries.map((entry) {
+                        return GestureDetector(
+                          onTap: () => _controller.animateToPage(entry.key),
+                          child: Container(
+                            width: 10.0,
+                            height: 10.0,
+                            margin: EdgeInsets.symmetric(
+                                vertical: 8.0, horizontal: 4.0),
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: (Theme.of(context).brightness ==
+                                            Brightness.dark
+                                        ? Colors.white
+                                        : Colors.black)
+                                    .withOpacity(
+                                        _current == entry.key ? 0.9 : 0.4)),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ]),
+                ),
+                // child: ListView.builder(
+                //     key: Key("dashboardHorizontalCareerAdviceListKey"),
+                //     padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                //     scrollDirection: Axis.horizontal,
+                //     itemCount: 1,
+                //     itemBuilder: (context, index) {
+                //       var advice = list[index];
+                //       // return CareerAdviceListTileH(advice, index);
+                //       return JobNewsListTileH(advice, index);
+                //     }),
+              ),
+      ],
+    );
+  }
+}
+
+class a {
+  String name;
+  String name2;
+  a({this.name, this.name2});
+}
