@@ -1,0 +1,62 @@
+[
+   {
+      "name":"Akram",
+      "deacription":"i am a student for bubt",
+      "status":1
+   },
+   {
+      "name":"Jolil",
+      "deacription":"i am a Teacher",
+      "status":2
+   },
+   {
+      "name":"Akram",
+      "deacription":"i am a student for bubt",
+      "status":1
+   },
+   {
+      "name":"Jolil",
+      "deacription":"i am a Teacher",
+      "status":2
+   },
+   {
+      "name":"Mr. Harun",
+      "deacription":"i am a student for bubt",
+      "status":3
+   },
+   {
+      "name":"Jolil",
+      "deacription":"i am a Teacher",
+      "status":2
+   },
+   {
+      "name":"Akram",
+      "deacription":"i am a student for bubt",
+      "status":1
+   },
+   {
+      "name":"Jolil",
+      "deacription":"i am a Teacher",
+      "status":2
+   },
+   {
+      "name":"Akram",
+      "deacription":"i am a student for bubt",
+      "status":1
+   },
+   {
+      "name":"Mr. Babu",
+      "deacription":"i am a Teacher",
+      "status":3
+   },
+   {
+      "name":"Mr Akram",
+      "deacription":"i am a student for bubt",
+      "status":1
+   },
+   {
+      "name":"Mr. Manik",
+      "deacription":"i am a Teacher",
+      "status":3
+   }
+]
