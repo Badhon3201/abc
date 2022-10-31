@@ -1,42 +1,30 @@
-[
-   {
-      "created_at":"2021-11-04T14:03:52.270953+06:00",
-      "job_name":"Software QA Interns (Remote)",
-      "company_name":"Ishraak Solutions Limited"
-   },
-   {
-      "created_at":"2021-11-15T12:10:19.290207+06:00",
-      "job_name":"Zonal Sales Manager, Food Commodity",
-      "company_name":"ACI Limited"
-   },
-   {
-      "created_at":"2021-11-15T12:10:32.320093+06:00",
-      "job_name":"Senior/ Marketing Officer, ENI Lubricant",
-      "company_name":"ACI Limited"
-   },
-   {
-      "created_at":"2021-11-15T12:10:39.895073+06:00",
-      "job_name":"Customer Services Officer, Institutional Sales",
-      "company_name":"ACI Limited"
-   },
-   {
-      "created_at":"2021-11-04T14:03:52.270953+06:00",
-      "job_name":"Software QA Interns (Remote)",
-      "company_name":"Ishraak Solutions Limited"
-   },
-   {
-      "created_at":"2021-11-15T12:10:19.290207+06:00",
-      "job_name":"Zonal Sales Manager, Food Commodity",
-      "company_name":"ACI Limited"
-   },
-   {
-      "created_at":"2021-11-15T12:10:32.320093+06:00",
-      "job_name":"Senior/ Marketing Officer, ENI Lubricant",
-      "company_name":"ACI Limited"
-   },
-   {
-      "created_at":"2021-11-15T12:10:39.895073+06:00",
-      "job_name":"Customer Services Officer, Institutional Sales",
-      "company_name":"ACI Limited"
-   }
-]
+{
+   "date":[
+      {
+         "Group":"My Name is Khan",
+         "list":[
+            {
+               "id":1,
+               "Title":"Class 1"
+            },
+            {
+               "id":2,
+               "Title":"Class 2"
+            }
+         ]
+      },
+      {
+         "Group":"My Name is Salman",
+         "list":[
+            {
+               "id":1,
+               "Title":"Class 1"
+            },
+            {
+               "id":1,
+               "Title":"Class 1"
+            }
+         ]
+      }
+   ]
+}
