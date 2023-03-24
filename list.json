@@ -1,8 +1,45 @@
-[
-   {
-      "name":"Akram"
-   },
-   {
-      "name":"karim"
-   }
-]
+{
+   "status":true,
+   "message":"Congratulations ! Your response submitted successfully.",
+   "validation_errors":[
+      
+   ],
+   "data":[
+      {
+         "id":1,
+         "poll_id":1,
+         "poll_category_id":1,
+         "poll_category_title":"Dating"
+      },
+      {
+         "id":2,
+         "poll_id":3,
+         "poll_category_id":1,
+         "poll_category_title":"Sex Ed "
+      },
+      {
+         "id":3,
+         "poll_id":3,
+         "poll_category_id":1,
+         "poll_category_title":"Relationships"
+      },
+      {
+         "id":1,
+         "poll_id":1,
+         "poll_category_id":1,
+         "poll_category_title":"College/Uni "
+      },
+      {
+         "id":2,
+         "poll_id":3,
+         "poll_category_id":1,
+         "poll_category_title":"In Public"
+      },
+      {
+         "id":3,
+         "poll_id":3,
+         "poll_category_id":1,
+         "poll_category_title":"Workplace"
+      }
+   ]
+}
