@@ -1,9 +1,7 @@
 {
    "status":true,
    "message":"Congratulations ! Your response submitted successfully.",
-   "validation_errors":[
-      
-   ],
+   "validation_errors":[],
    "data":[
       {
          "id":1,
@@ -24,19 +22,19 @@
          "poll_category_title":"Relationships"
       },
       {
-         "id":1,
+         "id":4,
          "poll_id":1,
          "poll_category_id":1,
          "poll_category_title":"College/Uni "
       },
       {
-         "id":2,
+         "id":5,
          "poll_id":3,
          "poll_category_id":1,
          "poll_category_title":"In Public"
       },
       {
-         "id":3,
+         "id":6,
          "poll_id":3,
          "poll_category_id":1,
          "poll_category_title":"Workplace"
